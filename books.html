@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book List – School Library</title>
+  <style>
+    :root {
+      --primary: #0d6efd;
+      --light: #f8f9fa;
+      --text-dark: #212529;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #fff;
+      color: var(--text-dark);
+    }
+
+    header, footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+
+    .book-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--light);
+      text-align: center;
+      padding: 1rem;
+      transition: transform 0.2s;
+    }
+
+    .book-card:hover {
+      transform: scale(1.02);
+    }
+
+    .book-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+    }
+
+    .book-card h3 {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    .book-card p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.5rem 1rem;
+      background: var(--primary);
+      color: white;
+      border-radius: 0.25rem;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #0b5ed7;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Library Book List</h1>
+  </header>
+
+  <main class="container">
+    <div class="book-grid">
+      <div class="book-card">
+        <img src="https://placehold.co/200x250?text=Book+1" alt="Book 1 Cover">
+        <h3>The Great Adventure</h3>
+        <p>By John Smith</p>
+      </div>
+      <div class="book-card">
+        <img src="https://placehold.co/200x250?text=Book+2" alt="Book 2 Cover">
+        <h3>Science Explained</h3>
+        <p>By Dr. Emily Ray</p>
+      </div>
+      <div class="book-card">
+        <img src="https://placehold.co/200x250?text=Book+3" alt="Book 3 Cover">
+        <h3>History Uncovered</h3>
+        <p>By Rachel Moore</p>
+      </div>
+      <div class="book-card">
+        <img src="https://placehold.co /200x250?text=Book+4" alt="Book 4 Cover">
+        <h3>Fantasy Realms</h3>
+        <p>By Lucas Kim</p>
+      </div>
+      <div class="book-card">
+        <img src="https://placehold.co/200x250?text=Book+5" alt="Book 5 Cover">
+        <h3>Learning Python</h3>
+        <p>By Nina Patel</p>
+      </div>
+      <div class="book-card">
+        <img src="https://placehold.co/200x250?text=Book+6" alt="Book 6 Cover">
+        <h3>World Atlas</h3>
+        <p>By Global Maps Inc.</p>
+      </div>
+    </div>
+
+    <div style="text-align: center;">
+      <a href="index.html" class="btn">← Back to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 School Library. All rights reserved.
+  </footer>
+
+</body>
+</html>
