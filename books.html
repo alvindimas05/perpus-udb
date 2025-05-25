@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Book List – School Library</title>
-  <style>
+   <style>
     :root {
       --primary: #0d6efd;
       --light: #f8f9fa;
@@ -43,7 +43,7 @@
 
     .book-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(5, 1fr);
       gap: 2rem;
     }
 
@@ -93,50 +93,38 @@
       background: #0b5ed7;
     }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/alasql"></script>
+  <script src="database.js"></script>
+  <script>
+      window.onload = () => {
+        const bookGrid = document.querySelector(".book-grid");
+        const books = alasql("SELECT * FROM books");
+        console.log(books);
+        books.forEach(book => {
+          bookGrid.insertAdjacentHTML("beforeend", `
+            <div class="book-card">
+              <img src="https://placehold.co/200x250?text=Book+2" alt="Book 2 Cover">
+              <h3>${book.title}</h3>
+              <p>${book.author}</p>
+            </div>
+          `);
+        });
+      };
+  </script>
 </head>
 <body>
 
   <header>
     <h1>Library Book List</h1>
   </header>
-
+  
   <main class="container">
-    <div class="book-grid">
-      <div class="book-card">
-        <img src="https://placehold.co/200x250?text=Book+1" alt="Book 1 Cover">
-        <h3>The Great Adventure</h3>
-        <p>By John Smith</p>
-      </div>
-      <div class="book-card">
-        <img src="https://placehold.co/200x250?text=Book+2" alt="Book 2 Cover">
-        <h3>Science Explained</h3>
-        <p>By Dr. Emily Ray</p>
-      </div>
-      <div class="book-card">
-        <img src="https://placehold.co/200x250?text=Book+3" alt="Book 3 Cover">
-        <h3>History Uncovered</h3>
-        <p>By Rachel Moore</p>
-      </div>
-      <div class="book-card">
-        <img src="https://placehold.co /200x250?text=Book+4" alt="Book 4 Cover">
-        <h3>Fantasy Realms</h3>
-        <p>By Lucas Kim</p>
-      </div>
-      <div class="book-card">
-        <img src="https://placehold.co/200x250?text=Book+5" alt="Book 5 Cover">
-        <h3>Learning Python</h3>
-        <p>By Nina Patel</p>
-      </div>
-      <div class="book-card">
-        <img src="https://placehold.co/200x250?text=Book+6" alt="Book 6 Cover">
-        <h3>World Atlas</h3>
-        <p>By Global Maps Inc.</p>
-      </div>
+    <div style="margin-bottom: 2rem;">
+      <a href="index.html" class="btn">← Back to Home</a>
+      <a href="create-book.html" class="btn">Create Book</a>
     </div>
 
-    <div style="text-align: center;">
-      <a href="index.html" class="btn">← Back to Home</a>
-    </div>
+    <div class="book-grid"></div>
   </main>
 
   <footer>
