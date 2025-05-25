@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>New Arrivals – School Library</title>
+  <style>
+    :root {
+      --primary: #0d6efd;
+      --light: #f8f9fa;
+      --text-dark: #212529;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #fff;
+      color: var(--text-dark);
+    }
+
+    header, footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .book-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .book {
+      flex: 1 1 250px;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      background: white;
+    }
+
+    .book h3 {
+      font-size: 1.125rem;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .book p {
+      font-size: 0.95rem;
+    }
+
+    a.btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.5rem 1rem;
+      background: var(--primary);
+      color: white;
+      border-radius: 0.25rem;
+      text-decoration: none;
+    }
+
+    a.btn:hover {
+      background: #0b5ed7;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>New Arrivals</h1>
+  </header>
+
+  <main class="container">
+    <p>Check out the latest books we've added to the library!</p>
+
+    <div class="book-list">
+      <div class="book">
+        <h3>The Midnight Library</h3>
+        <p>by Matt Haig – A powerful story about regret, hope, and infinite possibilities.</p>
+      </div>
+      <div class="book">
+        <h3>Atomic Habits</h3>
+        <p>by James Clear – A guide to breaking bad habits and building good ones through small changes.</p>
+      </div>
+      <div class="book">
+        <h3>Project Hail Mary</h3>
+        <p>by Andy Weir – A gripping sci-fi novel about saving Earth from disaster.</p>
+      </div>
+      <div class="book">
+        <h3>The Anthropocene Reviewed</h3>
+        <p>by John Green – Essays reviewing the human-centered planet with wit and insight.</p>
+      </div>
+      <!-- You can add more book entries here -->
+    </div>
+
+    <a href="index.html" class="btn">← Back to Home</a>
+  </main>
+
+  <footer>
+    &copy; 2025 School Library. All rights reserved.
+  </footer>
+
+</body>
+</html>

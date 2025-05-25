@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>School Library</title>
+  <style>
+    :root {
+      --primary: #0d6efd;
+      --light: #f8f9fa;
+      --text-dark: #212529;
+      --text-light: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, sans-serif;
+      background: var(--light);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .btn {
+      display: inline-block;
+      width: fit-content;
+      padding: 0.5em 1em;
+      font-size: 1rem;
+      border: none;
+      border-radius: 0.25rem;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    .btn-light {
+      background-color: white;
+      color: var(--primary);
+    }
+
+    .btn-lg {
+      font-size: 1.25rem;
+      padding: 0.75em 1.5em;
+    }
+
+    .btn-sm {
+      font-size: 0.875rem;
+      padding: 0.4em 0.75em;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    .hero {
+      background-color: var(--light);
+      height: 50vh;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin: 0 0 0.5rem 0;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -1rem 0 0 -1rem;
+    }
+
+    .col-4 {
+      width: 100%;
+      padding: 1rem 0 0 1rem;
+    }
+
+    @media(min-width: 768px) {
+      .col-4 {
+        width: 33.3333%;
+      }
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .card-text {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .section {
+      padding: 2rem 0;
+    }
+
+    .cta {
+      background: var(--primary);
+      color: white;
+      padding: 2rem 1rem;
+    }
+
+    .cta a {
+      margin-top: 1rem;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Welcome to School Library</h1>
+      <p>Discover a world of knowledge at your fingertips.</p>
+      <a href="visit.html" class="btn btn-primary btn-lg">Explore Library</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section">
+    <div class="container text-center">
+      <h2>About Us</h2>
+      <p>
+        Our library is a vibrant and inclusive space that supports the academic,
+        informational, and recreational needs of our students and staff. We offer
+        a vast collection of books, digital resources, and various programs to foster
+        a love of reading and learning.
+      </p>
+    </div>
+  </section>
+
+  <!-- Featured Sections -->
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <div class="card">
+            <div>
+              <h5 class="card-title">New Arrivals</h5>
+              <p class="card-text">Check out our latest book arrivals and expand your reading list.</p>
+            </div>
+            <a href="new-arrivals.html" class="btn btn-sm btn-primary">View Collection</a>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card">
+            <div>
+              <h5 class="card-title">Digital Resources</h5>
+              <p class="card-text">Access our digital library for e-books, journals, and more.</p>
+            </div>
+            <a href="explore-resources.html" class="btn btn-sm btn-primary">Explore Resources</a>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card">
+            <div>
+              <h5 class="card-title">Programs & Events</h5>
+              <p class="card-text">Join us for various programs and events that foster a love for reading and learning.</p>
+            </div>
+            <a href="learn-more.html" class="btn btn-sm btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta text-center">
+    <div class="container">
+      <h3>Ready to Explore?</h3>
+      <a href="visit.html" class="btn btn-light btn-lg">Visit Our Library</a>
+    </div>
+  </section>
+
+</body>
+</html>
