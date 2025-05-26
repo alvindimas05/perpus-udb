@@ -115,7 +115,7 @@
         books.forEach(book => {
           bookGrid.insertAdjacentHTML("beforeend", `
             <div class="book-card">
-              <img src="https://placehold.co/200x250?text=Book+2" alt="Book 2 Cover">
+              <img src="https://placehold.co/200x250?text=${book.title}" alt="${book.title} Cover">
               <h3>${book.title}</h3>
               <p>${book.author}</p>
               <a class="btn-delete" onclick="deleteBook(${book.id})">Delete</a>
